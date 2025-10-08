@@ -8,7 +8,7 @@
 // console.log((25 < 30) && ("Tai" === "Tai")) // true
 // console.log((25 < 30) || ("Tai" === "Tai")) //  true
 
-// console.log(!true) //
+// console.log(!(30 < 21)) // true
 
 // let age = 80;
 
