@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 8: Giới thiệu về DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- 
+    DOM: (Document Object Model) dùng để truy suất và thao tác trên 
+        các tài liệu có cấu trúc dạng HTML hoặc XML
+    Các loại DOM trong javascript:
+        - DOM document: lưu trữ toàn bộ các thành phần trong document của website
+        - DOM element: truy suất tới "thẻ HTML" nào đó thông qua 
+            các thuộc tính như tên class, id, tên của thẻ
+        - DOM HTML: thay đổi giá trị của nội dung và thuộc tính của các thẻ HTML
+        - DOM CSS: thay đổi định dạng css của thẻ HTML
+        - DOM EVENT: gán các sự kiện như onclick vào các thẻ HTML
+        - DOM Listen: Lắng nghe các sự kiện tác động trên HTML
+        - DOM Node, NodeList: thao tác với HTML thông qua đối tượng (Object)
+        - DOM Navigation: dùng để quản lý, thao tác với các thẻ HTML, 
+            thể hiện mối quan hệ cha-con
+
+        DOM element: 
+            + getElementById("ten_id")
+            + getElementsByClassName("ten_class")
+            + getElementsByTagName("ten_the")
+        DOM Node, NodeList:
+            + querySelector("tag_name || .class || #id")
+            + querySelectorAll("tag_name || .class || #id")
+-->
+
+<body>
+    <p id="param">fullhouse dev</p>
+    <p id="param">fullhouse dev</p>
+    <p id="param">fullhouse dev</p>
+    <p id="param">fullhouse dev</p>
+    <div class="fullhouse">fullhouse dev</div>
+    <div class="fullhouse">fullhouse dev</div>
+    <div class="fullhouse">fullhouse dev</div>
+    <div class="fullhouse">fullhouse dev</div>
+    <div class="fullhouse">fullhouse dev</div>
+    <a href=""></a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
