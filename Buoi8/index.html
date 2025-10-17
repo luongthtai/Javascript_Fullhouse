@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
+    YTB: Tôi làm dev (Html css js Reactjs java c++)
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buổi 8: Giới thiệu về DOM</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <!-- 
-    DOM: (Document Object Model) dùng để truy suất và thao tác trên 
+    DOM: (Document Object Model) dùng để truy suất và thao tác trên
         các tài liệu có cấu trúc dạng HTML hoặc XML
     Các loại DOM trong javascript:
         - DOM document: lưu trữ toàn bộ các thành phần trong document của website
@@ -23,22 +30,46 @@
         - DOM Navigation: dùng để quản lý, thao tác với các thẻ HTML, 
             thể hiện mối quan hệ cha-con
 
-        DOM element: 
-            + getElementById("ten_id")
-            + getElementsByClassName("ten_class")
-            + getElementsByTagName("ten_the")
-        DOM Node, NodeList:
-            + querySelector("tag_name || .class || #id")
-            + querySelectorAll("tag_name || .class || #id")
-        DOM HTML:
-            + Thay đổi nội dung Text và HTML
-        DOM EVENT: 
-            onclick
+    DOM element: 
+        + getElementById("ten_id")
+        + getElementsByClassName("ten_class")
+        + getElementsByTagName("ten_the")
+    DOM Node, NodeList:
+        + querySelector("tag_name || .class || #id")
+        + querySelectorAll("tag_name || .class || #id")
+    DOM HTML:
+        + Thay đổi nội dung Text và HTML
+    DOM EVENT: 
+        onclick
+    DOM CSS:
+        + Cú pháp: element.style.color = "giá_trị"
+        + "classList"
+            + add: Thêm 1 class
+            + remove: Xóa 1 class
+            + toggle: Bật/tắt class
+            + contains: Kiểm tra xem phần tử có chứa class đó hay không
+                => boolean (true/false)
+    Tạo một phần tử:
+        cú pháp: document.createElement("tagName")
+    Xóa phần tử ra khỏi DOM:
+        Cú pháp: element.remove()
+-->
+
+<!-- 
+    TO-DO LIST:
+        + Lưu lại những việc mình chuẩn bị làm
+        + Thay đổi trạng thái của những việc đó
 -->
 
 <body>
+    <!-- <p class="text-red">fullhouse dev</p>
+    <a href="" id="about">About Page</a> -->
+    <!-- <div>
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-regular fa-compass"></i>
+        <p>Check status: <span id="status" class="text-lg">Status</span></p>
+    </div> -->
     <!-- <p id="param"><strong>fullhouse dev lập trình cho mọi nhà</strong> <i>!!!</i></p>
-    <p id="param">fullhouse dev</p>
     <p id="param">fullhouse dev</p>
     <p id="param">fullhouse dev</p>
     <div class="fullhouse">fullhouse dev</div>
@@ -47,7 +78,10 @@
     <div class="fullhouse">fullhouse dev</div>
     <div class="fullhouse">fullhouse dev</div>
     <p class="fullhouse"></p>
-    <a class="fullhouse" id="param" href=""></a> -->
+     -->
+    <!-- <p id="hello">Hello world</p>
+    <p id="fullhouse">Fullhouse dev</p>
+    <p>Javascript</p> -->
 
     <!-- <form>
         <div>
@@ -57,19 +91,31 @@
 
         <button type="button" id="submit">Submit</button>
     </form> -->
-    <div>
+    <!-- <div>
         <p id="cout"></p>
-    </div>
+    </div> -->
 
 
     <!-- <div>
         <p id="show_email"></p>
         <p id="show_password"></p>
     </div> -->
-    <div>
+    <!-- <div>
         <button id="pre">-</button>
         <button id="next">+</button>
-    </div>
+    </div> -->
+    <!-- <button id="btn_success">Thành công</button>
+    <button id="btn_warning">Cảnh báo</button>
+    <button id="btn_error">Lỗi</button> -->
+
+    <form>
+        <label for="work">Nhập tên công việc:</label>
+        <input type="text" id="work">
+        <button type="button" id="submit">Lưu công việc</button>
+    </form>
+
+    <ul id="todoList">
+    </ul>
 
     <script src="script.js"></script>
 </body>
