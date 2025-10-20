@@ -110,13 +110,55 @@
 
 // helloElm.remove()
 
+// dart => flutter
+// js => react native
+
 const btnSubmit = document.getElementById("submit")
 const inputForm = document.getElementById("work")
 const todoList = document.getElementById("todoList")
 
 btnSubmit.onclick = function () {
-    const workItem = document.createElement("li")
-    workItem.textContent = inputForm.value
+    const valueInput = inputForm.value.trim()
 
-    todoList.appendChild(workItem)
+    if (!valueInput) alert("Hãy nhập gì đó !!!")
+    else {
+        const listWork = localStorage.getItem("listWork")
+
+        // Tạo element html
+        const liElm = document.createElement("li")
+        const divElm = document.createElement("div")
+        const spanElm = document.createElement("span")
+        const btnElm = document.createElement("button")
+
+        // Thêm span, button vào thẻ div
+        divElm.appendChild(spanElm)
+        divElm.appendChild(btnElm)
+
+        // Thêm class "workItem" vào thẻ div
+        divElm.classList.add("workItem")
+
+        // Thêm thẻ div vào thẻ li
+        liElm.appendChild(divElm)
+
+        // Gán content vào thẻ span và thẻ button
+        spanElm.textContent = valueInput
+        btnElm.textContent = "Xóa"
+
+        // Gán index vào span
+        liElm.setAttribute("data-index", listWork.length ? 0 : listWork.length)
+
+        // Add thẻ li (công việc) vào thẻ ul (list công việc)
+        todoList.appendChild(liElm)
+
+        localStorage.setItem("listWork", [...arguments, valueInput])
+
+        // Reset form
+        inputForm.value = ""
+        inputForm.focus()
+
+        // Xóa thẻ li (công việc)
+        btnElm.addEventListener("click", function () {
+            liElm.remove()
+        })
+    }
 }

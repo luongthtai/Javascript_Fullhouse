@@ -31,3 +31,8 @@
     border: 1px solid green;
     font-size: 18px;
 }
+
+.workItem {
+    display: flex;
+    gap: 10px;
+}
